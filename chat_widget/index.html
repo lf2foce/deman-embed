@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Chat Widget</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="header-content">
+                <div class="header-main">
+                    <div class="header-text">
+                        <h1 class="header-title">CSKH Oniiz</h1>
+                    </div>
+                </div>
+                <div class="header-nav">
+                    <button class="close-btn" id="closeBtn" onclick="parent.postMessage('closeChat', '*')">
+                        <svg class="icon icon-sm" viewBox="0 0 24 24">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-main">
+            <div class="messages-container">
+                <div class="messages-scroll" id="messagesScroll">
+                    <div class="messages-list" id="messagesList">
+                        <div class="message assistant">
+                            <div class="avatar bot">
+                                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                                    <path d="M12 8V4H8"></path>
+                                    <rect width="16" height="12" x="4" y="8" rx="2"></rect>
+                                    <path d="M2 14h2"></path>
+                                    <path d="M20 14h2"></path>
+                                    <path d="M15 13v2"></path>
+                                    <path d="M9 13v2"></path>
+                                </svg>
+                            </div>
+                            <div class="message-content">
+                                <div class="message-text markdown-content">🌸 Xin chào! Em là Tiên - nhân viên chăm sóc khách hàng của Oniiz. Em có thể giúp anh/chị tư vấn về các sản phẩm bọt vệ sinh, sữa tắm, nước hoa, xịt thơm miệng và các sản phẩm chăm sóc cá nhân khác của Oniiz. Em cũng có thể hỗ trợ về giá cả, khuyến mãi và cách sử dụng sản phẩm. Anh/chị cần tư vấn gì hôm nay ạ?</div>
+                                <div class="message-time">Vừa xong</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <div class="input-container">
+                    <div class="suggestions" id="suggestions">
+                        <div class="suggestions-list">
+                            <button class="suggestion-btn">Bọt vệ sinh</button>
+                <button class="suggestion-btn">Sữa tắm nào thơm nhất</button>
+                <button class="suggestion-btn">Có khuyến mãi không em</button>
+                <button class="suggestion-btn">Feedback khách hàng</button>
+                        </div>
+                    </div>
+
+                    <div class="input-row">
+                        <div class="input-wrapper">
+                            <input 
+                                type="text" 
+                                class="chat-input" 
+                                id="chatInput" 
+                                placeholder="Nhập tin nhắn của bạn..." 
+                                autocomplete="off"
+                            >
+                        </div>
+                        <button class="send-btn" id="sendBtn">
+                            <svg class="icon icon-sm" viewBox="0 0 24 24">
+                                <path d="m22 2-7 20-4-9-9-4z"></path>
+                                <path d="M22 2 11 13"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="disclaimer">
+                        Trợ lý AI có thể mắc lỗi. Hãy kiểm tra thông tin quan trọng.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

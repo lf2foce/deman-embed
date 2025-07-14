@@ -1,7 +1,7 @@
 (function() {
     // Use absolute base path for external deployment
     console.log("embed loaded");
-    const basePath = 'https://deman-agent.onrender.com/static';
+    const basePath = 'https://lf2foce.github.io/deman-embed';
 
     // Create a container for the chat widget
     const chatContainer = document.createElement('div');
